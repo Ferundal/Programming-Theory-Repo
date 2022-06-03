@@ -8,6 +8,8 @@ public class GameOptions : MonoBehaviour
     // Start is called before the first frame update
 
     private string b_PlayerNick = "NoName";
+
+    // ENCAPSULATION
     public string PlayerNick
     {
         get
@@ -19,6 +21,10 @@ public class GameOptions : MonoBehaviour
             if (value.Length > 10)
             {
                 b_PlayerNick = new string(value.ToCharArray(), 0, 10);
+            }
+            else
+            {
+                b_PlayerNick = value;
             }
         }
     }
